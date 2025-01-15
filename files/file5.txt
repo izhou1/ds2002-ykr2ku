@@ -1,0 +1,89 @@
+    1  pwd
+    2  ls
+    3  ls -al
+    4  cd .
+    5  pwd
+    6  cd ..
+    7  pwd
+    8  cd ..
+    9  pwd
+   10  ls - al
+   11  ls -al
+   12  cd ~ 
+   13  pwpd
+   14  pwd
+   15  ls -al
+   16  cd /workspaces/
+   17  cd/workspaces/ds2002-ykr2ku/
+   18  cd/workspaces/ds2002-ykr2ku
+   19  touch file1.txt
+   20  cd /workspaces/
+   21  cd /workspaces
+   22  touch file2.txt
+   23  ls -al
+   24  echo "a man a plan a canal panama"
+   25  echo "a man a plan a canal panama" > file1.txt
+   26  ls -al
+   27  pwd
+   28  cat file1.txt
+   29  cd.
+   30  cd .
+   31  cat file1.txt > file2.txt
+   32  cat file1.txt > file3.txt
+   33  ls -al
+   34  cd ..
+   35  cd /workspaces/ds2002-ykr2ku
+   36  ls -al
+   37  touch file1.txt
+   38  touch file2.txt
+   39  touch file3.txt
+   40  echo "this should be a second line" >> file2
+   41  echo "this should be a second line" > file2
+   42  cat file2.txt
+   43  echo "a man a plan a canal panama" > file 1.txt
+   44  cat /dev/null > file3.txt
+   45  ls -al
+   46  cat file1.txt
+   47  mkdir files
+   48  ls -al
+   49  echo "a man a plan a canal panama" > file1.txt
+   50  cat file1.txt
+   51  mv file1.txt files/
+   52  ls -al
+   53  ls -al files/
+   54  touch file4.txt
+   55  touch file5.txt
+   56  cp file2.txt file6.txt
+   57  cp file3.txt file7.txt
+   58  ls -al
+   59  rm file
+   60  rm file2
+   61  ls -al
+   62  "this should be a second line" > file2.txt
+   63  echo "this should be a second line" > file2.txt
+   64  touch script.sh
+   65  touch myscript.py
+   66  ls -al
+   67  echo "this should be a second line" > file6.txt
+   68  ls -al
+   69  mv file*.txt files/
+   70  ls -al
+   71  rm files/file7.txt
+   72  cd files
+   73  ls -al
+   74  cd ..
+   75  ls -al
+   76  top
+   77  ps
+   78  ps aux
+   79  cd files/
+   80  ls -al
+   81  ps aux > file6.txt
+   82  ls -al
+   83  head file6.txt
+   84  head -n 3 file6.txt
+   85  tail -n 2 file6.txt
+   86  history
+   87  ps aux
+   88  ls -al
+   89  history > file5.txt
