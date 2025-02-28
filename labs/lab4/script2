@@ -1,1 +1,36 @@
+import boto3
+import sys
+import os
+import requests
+from urllib.parse import urlparse
+
+s3 = boto3.client('s3', region_name='us-east-1')
+
+def create_presigned_url(url_name, bucket_name, expiration):
+        parsed_url = urlparse(url_name)
+        file_name = os.path.basename(parsed_url.path)
+
+        path = os.path.join(os.getcwd(), file_name)
+
+        response = requests.get(url_name, stream=True)
+        response.raise_for_status()
+
+        with open(path, 'wb') as file:
+                for chunk in response.iter_content(chunk_size=8192):
+                        file.write(chunk)
+
+        s3 = boto3.client('s3', region_name='us-east-1')
+
+        response = s3.put_object(Body = path, Bucket = bucket_name, Key = file_name, ACL = 'public-read')
+
+        response = s3.generate_presigned_url('get_object', Params = {'Bucket': bucket_name, 'Key': file_name}, ExpiresIn=expiration)
+
+        print(response)
+
+if __name__ == "__main__":
+        url_name=sys.argv[1]
+        bucket_name=sys.argv[2]
+        expiration=sys.argv[3]
+
+        create_presigned_url(url_name, bucket_name, expiration)
 
