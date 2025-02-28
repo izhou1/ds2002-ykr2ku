@@ -1,1 +1,13 @@
+#!/bin/bash
 
+FILE_NAME=$1
+BUCKET_NAME=$2
+EXPIRATION=$3
+
+aws s3 mb s3://$BUCKET_NAME
+
+curl https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_3x2.jpg > FILE_NAME
+
+aws s3 cp $FILE_NAME s3://$BUCKET_NAME/
+
+aws s3 presign --expires-in $EXPIRATION s3://$BUCKET_NAME/$FILE_NAME
